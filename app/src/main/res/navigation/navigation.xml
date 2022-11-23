@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="edu.cs371m.triviagame.ui.main.TitleFragment"
+        android:label="fragment_title"
+        tools:layout="@layout/fragment_title" >
+        <action
+            android:id="@+id/action_titleFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="edu.cs371m.triviagame.ui.main.GameFragment"
+        android:label="GameFragment"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_gameFragment_to_gameOverFragment"
+            app:destination="@id/gameOverFragment"
+            app:popUpTo="@+id/gameFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_gameFragment_to_correctFragment"
+            app:destination="@id/correctFragment"
+            app:popUpTo="@id/gameFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="getQuestionIndexFromOtherFragment"
+            app:argType="integer" />
+        <argument
+            android:name="getListFromOtherFragment"
+            app:argType="edu.cs371m.triviagame.Questions" />
+        <argument
+            android:name="getScore"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_gameFragment_to_timesUpFragment"
+            app:destination="@id/timesUpFragment"
+            app:popUpTo="@id/gameFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameOverFragment"
+        android:name="edu.cs371m.triviagame.ui.main.GameOverFragment"
+        android:label="Techie"
+        tools:layout="@layout/fragment_game_over" >
+        <action
+            android:id="@+id/action_gameOverFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popUpTo="@+id/titleFragment"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="getQuestionIndexFromGameFragment"
+            app:argType="integer" />
+        <argument
+            android:name="getListFromGameFragment"
+            app:argType="edu.cs371m.triviagame.Questions" />
+        <argument
+            android:name="getScore"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_gameOverFragment_to_gameWonFragment"
+            app:destination="@id/gameWonFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popUpTo="@id/titleFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameWonFragment"
+        android:name="edu.cs371m.triviagame.ui.main.GameWonFragment"
+        android:label="Techie"
+        tools:layout="@layout/fragment_game_won" >
+        <argument
+            android:name="getScore"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_gameWonFragment_to_titleFragment"
+            app:destination="@id/titleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popUpTo="@id/gameWonFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="edu.cs371m.triviagame.ui.main.AboutFragment"
+        android:label="Techie"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="edu.cs371m.triviagame.ui.main.RulesFragment"
+        android:label="Techie"
+        tools:layout="@layout/fragment_rules" />
+    <fragment
+        android:id="@+id/correctFragment"
+        android:name="edu.cs371m.triviagame.ui.main.CorrectFragment"
+        android:label="CorrectFragment" >
+        <action
+            android:id="@+id/action_correctFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popUpTo="@id/titleFragment"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="getQuestionIndexFromGameFragment"
+            app:argType="integer" />
+        <argument
+            android:name="getListFromGameFragment"
+            app:argType="edu.cs371m.triviagame.Questions" />
+        <argument
+            android:name="getScore"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_correctFragment_to_gameWonFragment"
+            app:destination="@id/gameWonFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popUpTo="@id/titleFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_correctFragment_to_levelUpFragment"
+            app:destination="@id/levelUpFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popUpTo="@id/titleFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_correctFragment_to_levelUpTwoFragment"
+            app:destination="@id/levelUpTwoFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popUpTo="@id/titleFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/levelUpFragment"
+        android:name="edu.cs371m.triviagame.ui.main.LevelUpFragment"
+        android:label="LevelUpFragment" >
+        <action
+            android:id="@+id/action_levelUpFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popUpTo="@id/titleFragment"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="getQuestionIndexFromCorrectFragment"
+            app:argType="integer" />
+        <argument
+            android:name="getListFromCorrectFragment"
+            app:argType="edu.cs371m.triviagame.Questions" />
+        <argument
+            android:name="getScore"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/levelUpTwoFragment"
+        android:name="edu.cs371m.triviagame.ui.main.LevelUpTwoFragment"
+        android:label="LevelUpTwoFragment" >
+        <action
+            android:id="@+id/action_levelUpTwoFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popUpTo="@id/titleFragment"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="getQuestionIndexFromCorrectFragment"
+            app:argType="integer" />
+        <argument
+            android:name="getListFromCorrectFragment"
+            app:argType="edu.cs371m.triviagame.Questions" />
+        <argument
+            android:name="getScore"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/timesUpFragment"
+        android:name="edu.cs371m.triviagame.ui.main.TimesUpFragment"
+        android:label="TimesUpFragment" >
+        <action
+            android:id="@+id/action_timesUpFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:popUpTo="@id/titleFragment"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="getQuestionIndexFromGameFragment"
+            app:argType="integer" />
+        <argument
+            android:name="getListFromGameFragment"
+            app:argType="edu.cs371m.triviagame.Questions" />
+        <argument
+            android:name="getScore"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_timesUpFragment_to_gameWonFragment"
+            app:destination="@id/gameWonFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:popUpTo="@id/titleFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+</navigation>

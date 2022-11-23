@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.navigation.LevelUpFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/levelUpConstraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent">
+
+        <Button
+            android:id="@+id/nextMatchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="68dp"
+            android:paddingStart="@dimen/button_padding"
+            android:paddingEnd="@dimen/button_padding"
+            android:text="Continue"
+            android:textSize="@dimen/button_text_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/youWinImage"
+            android:layout_width="336dp"
+            android:layout_height="233dp"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginTop="96dp"
+            android:layout_marginEnd="@dimen/horizontal_margin"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/levelupone"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="POWER-UP!"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/youWinImage" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="24dp"
+            android:text="From now on, your\nscore will be doubled\nfor each correct answer"
+            app:layout_constraintBottom_toTopOf="@+id/nextMatchButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "194627778389",
+    "project_id": "finalprojectandroid-8dae1",
+    "storage_bucket": "finalprojectandroid-8dae1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:194627778389:android:2caef28666c97a7735a1dc",
+        "android_client_info": {
+          "package_name": "edu.cs371m.triviagame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "194627778389-vj2k9t5d5pra8cok8t5pi9ru0k2s5u4n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "edu.cs371m.triviagame",
+            "certificate_hash": "24d265d1d1e91ce64ddc7543d5e45d248d21dcb7"
+          }
+        },
+        {
+          "client_id": "194627778389-94sgg3fo90i6i0q84lsg7eupqho31sce.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ5o4j7UO7nZ0SectWZRkjUr21_HknoPQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "194627778389-94sgg3fo90i6i0q84lsg7eupqho31sce.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

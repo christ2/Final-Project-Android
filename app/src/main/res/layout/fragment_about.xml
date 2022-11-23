@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context="edu.cs371m.triviagame.ui.main.AboutFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<!--        <ImageView-->
+<!--            android:layout_width="fill_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/profile_logo" />-->
+        <ImageView
+            android:id="@+id/aboutImage"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/image_header_height"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginTop="@dimen/vertical_margin"
+            android:layout_marginEnd="@dimen/horizontal_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/profile_logo" />
+
+        <TextView
+            android:id="@+id/rulesText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/horizontal_margin"
+            android:layout_marginTop="156dp"
+            android:layout_marginEnd="@dimen/horizontal_margin"
+            android:gravity="center"
+            android:text="@string/about_text"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/aboutImage" />
+
+        <TextView
+            android:id="@+id/profileTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textColor="@color/youWinDark"
+            android:textSize="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/aboutImage"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/displayNameET"
+            android:layout_width="300dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rulesText"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/submitUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/displayNameET"
+            app:layout_constraintVertical_bias="0.291"
+            tools:ignore="MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
