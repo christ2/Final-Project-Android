@@ -42,9 +42,13 @@
         <entry key="..\:/Users/hp_5c/OneDrive/Documents/fc5-christ2/app/src/main/res/menu/winner_menu.xml" value="0.36302083333333335" />
         <entry key="..\:/Users/hp_5c/OneDrive/Documents/fc5-christ2/app/src/main/res/mipmap-anydpi-v26/ic_techi_logo.xml" value="0.194" />
         <entry key="..\:/Users/hp_5c/OneDrive/Documents/fc5-christ2/app/src/main/res/mipmap-anydpi-v26/ic_techi_logo_round.xml" value="0.194" />
+        <entry key="..\:/Users/hp_5c/OneDrive/Pictures/final-project-ap/app/src/main/res/drawable/android.xml" value="0.2245" />
+        <entry key="..\:/Users/hp_5c/OneDrive/Pictures/final-project-ap/app/src/main/res/layout/activity_main.xml" value="0.36302083333333335" />
+        <entry key="..\:/Users/hp_5c/OneDrive/Pictures/final-project-ap/app/src/main/res/layout/leaderboard.xml" value="0.36302083333333335" />
       </map>
     </option>
   </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
